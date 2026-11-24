@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brows by Assma Cosmetics — Salón de Belleza en Madrid</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="salon-header">
+    <div class="salon-nav-wrap">
+      <a href="#" class="salon-logo">BROWS BY ASSMA <span>COSMETICS</span></a>
+      <nav class="salon-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#reservar">Reservar</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="../portfolio.html#proyectos" class="back-link">← Portfolio</a>
+      </nav>
+    </div>
+
+    <div class="salon-hero">
+      <img
+        src="img/salon-hero.jpg"
+        alt="Brows by Assma Cosmetics"
+        class="hero-bg-img"
+        onerror="this.src='https://placehold.co/1400x800/2a211b/e7d5be?text=Brows+by+Assma+Cosmetics'"
+      />
+      <div class="hero-scrim"></div>
+      <div class="hero-inner">
+        <p class="salon-kicker">Salón de Belleza · Embajadores, Madrid</p>
+        <h1>Mirada definida, cuidado facial y bienestar a tu medida</h1>
+        <p class="salon-lead">
+          Diseño y depilación de cejas, laminación, pestañas, maquillaje, tratamientos faciales y terapias corporales en C. de Concepción Jerónima, 5.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#servicios" class="btn-gold">Ver servicios</a>
+          <a href="#reservar" class="btn-light-outline">Reservar cita aquí</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="salon-main">
+    <section id="servicios" class="salon-section">
+      <div class="section-heading">
+        <span class="mini-label">Carta de tratamientos</span>
+        <h2>Servicios y precios</h2>
+        <p>Filtra por categoría para explorar los tratamientos disponibles y pulsar en reservar.</p>
+      </div>
+
+      <div class="cat-tabs" role="group" aria-label="Filtrar servicios">
+        <button type="button" class="cat-btn active" data-cat="all">Todos</button>
+        <button type="button" class="cat-btn" data-cat="cejas-pestanas">Cejas y Pestañas</button>
+        <button type="button" class="cat-btn" data-cat="rostro-maquillaje">Rostro y Maquillaje</button>
+        <button type="button" class="cat-btn" data-cat="depilacion">Depilación</button>
+        <button type="button" class="cat-btn" data-cat="bienestar">Cuerpo y Bienestar</button>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" data-cat="cejas-pestanas">
+          <img
+            src="img/cejas.jpg"
+            alt="Definición y depilación de cejas"
+            onerror="this.src='https://placehold.co/600x400/ede3d2/3b2f26?text=Cejas'"
+          />
+          <div class="service-body">
+            <div class="service-top">
+              <span class="service-cat">Cejas</span>
+              <span class="service-price">desde 12 €</span>
+            </div>
+            <h3>Definición y Depilación de Cejas</h3>
+            <p>Incluye Depilación con Hilo Cejas (15 min · 12 €), Diseño y Tinte de Cejas (30 min · 25 €), HALAL BROWS (1 h · 39 €), Laminación de Cejas (45 min · 45 €) y Retoque de Cejas (1 h · 50 €).</p>
+            <button type="button" class="book-service-btn" data-service="Definición y Depilación de Cejas (desde 12 €)">Reservar aquí</button>
+          </div>
+        </article>
+
+        <article class="service-card" data-cat="cejas-pestanas">
+          <img
+            src="img/pestanas.jpg"
+            alt="Pestañas y tinte"
+            onerror="this.src='https://placehold.co/600x400/ede3d2/3b2f26?text=Pestanas'"
+          />
+          <div class="service-body">
+            <div class="service-top">
+              <span class="service-cat">Pestañas y Tinte</span>
+              <span class="service-price">25 € – 49 €</span>
+            </div>
+            <h3>Tinte, Extensiones y Lifting</h3>
+            <p>Tinte de Pestañas y Cejas (25 €) y Extensiones y Lifting de Pestañas (49 €) para realzar la mirada con un acabado cuidado.</p>
+            <button type="button" class="book-service-btn" data-service="Extensiones y Lifting de Pestañas (49 €)">Reservar aquí</button>
+          </div>
+        </article>
+
+        <article class="service-card" data-cat="rostro-maquillaje">
+          <img
+            src="img/facial.jpg"
+            alt="Tratamientos faciales y maquillaje"
+            onerror="this.src='https://placehold.co/600x400/ede3d2/3b2f26?text=Facial+%26+Maquillaje'"
+          />
+          <div class="service-body">
+            <div class="service-top">
+              <span class="service-cat">Rostro y Maquillaje</span>
+              <span class="service-price">desde 39 €</span>
+            </div>
+            <h3>Maquillaje y Tratamientos Faciales</h3>
+            <p>Maquillaje Tradicional y Permanente (desde 39 €), Tratamientos Capilares (49 €) y Tratamientos Faciales (desde 59 €).</p>
+            <button type="button" class="book-service-btn" data-service="Maquillaje Tradicional y Permanente (desde 39 €)">Reservar aquí</button>
+          </div>
+        </article>
+
+        <article class="service-card" data-cat="depilacion">
+          <img
+            src="img/depilacion.jpg"
+            alt="Depilación tradicional y permanente"
+            onerror="this.src='https://placehold.co/600x400/ede3d2/3b2f26?text=Depilacion'"
+          />
+          <div class="service-body">
+            <div class="service-top">
+              <span class="service-cat">Depilación</span>
+              <span class="service-price">desde 5 €</span>
+            </div>
+            <h3>Depilación y Depilación Permanente</h3>
+            <p>Servicios de Depilación (desde 5 €) y opciones de Depilación Permanente (69 €).</p>
+            <button type="button" class="book-service-btn" data-service="Depilación (desde 5 €)">Reservar aquí</button>
+          </div>
+        </article>
+
+        <article class="service-card" data-cat="bienestar">
+          <img
+            src="img/bienestar.jpg"
+            alt="Masajes, SPA y terapias corporales"
+            onerror="this.src='https://placehold.co/600x400/ede3d2/3b2f26?text=SPA+%26+Masajes'"
+          />
+          <div class="service-body">
+            <div class="service-top">
+              <span class="service-cat">SPA y Bienestar</span>
+              <span class="service-price">desde 15 €</span>
+            </div>
+            <h3>SPA, Masajes y Terapias Corporales</h3>
+            <p>SPA y Bienestar (15 €), Masajes (desde 15 €) y Tratamientos y Terapias Corporales (desde 39 €).</p>
+            <button type="button" class="book-service-btn" data-service="SPA y Bienestar (15 €)">Reservar aquí</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="reservar" class="salon-section booking-section">
+      <div class="section-heading">
+        <span class="mini-label">Cita en nuestra web</span>
+        <h2>Solicita tu reserva</h2>
+        <p>Elige el servicio, el día y la franja horaria que prefieras directamente aquí.</p>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="servicioSelect">Servicio</label>
+            <select id="servicioSelect" name="servicio" required>
+              <option value="Depilación con Hilo Cejas (15 min · 12 €)">Depilación con Hilo Cejas (15 min · 12 €)</option>
+              <option value="Diseño y Tinte de Cejas (30 min · 25 €)">Diseño y Tinte de Cejas (30 min · 25 €)</option>
+              <option value="HALAL BROWS (1 h · 39 €)">HALAL BROWS (1 h · 39 €)</option>
+              <option value="Laminación de Cejas (45 min · 45 €)">Laminación de Cejas (45 min · 45 €)</option>
+              <option value="Retoque de Cejas (1 h · 50 €)">Retoque de Cejas (1 h · 50 €)</option>
+              <option value="Definición y Depilación de Cejas (desde 12 €)">Definición y Depilación de Cejas (desde 12 €)</option>
+              <option value="Tinte de Pestañas y Cejas (25 €)">Tinte de Pestañas y Cejas (25 €)</option>
+              <option value="Extensiones y Lifting de Pestañas (49 €)">Extensiones y Lifting de Pestañas (49 €)</option>
+              <option value="Maquillaje Tradicional y Permanente (desde 39 €)">Maquillaje Tradicional y Permanente (desde 39 €)</option>
+              <option value="Tratamientos Faciales (desde 59 €)">Tratamientos Faciales (desde 59 €)</option>
+              <option value="Tratamientos Capilares (49 €)">Tratamientos Capilares (49 €)</option>
+              <option value="Depilación (desde 5 €)">Depilación (desde 5 €)</option>
+              <option value="Depilación Permanente (69 €)">Depilación Permanente (69 €)</option>
+              <option value="SPA y Bienestar (15 €)">SPA y Bienestar (15 €)</option>
+              <option value="Masajes (desde 15 €)">Masajes (desde 15 €)</option>
+              <option value="Tratamientos y Terapias Corporales (desde 39 €)">Tratamientos y Terapias Corporales (desde 39 €)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fechaInput">Fecha preferida</label>
+            <input type="date" id="fechaInput" name="fecha" required />
+          </div>
+
+          <div class="form-group">
+            <label for="horaSelect">Franja horaria</label>
+            <select id="horaSelect" name="hora" required>
+              <option value="Mañana (10:00 - 13:30)">Mañana (10:00 - 13:30)</option>
+              <option value="Mediodía (13:30 - 16:30)">Mediodía (13:30 - 16:30)</option>
+              <option value="Tarde (16:30 - 20:00)">Tarde (16:30 - 20:00)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clienteNombre">Tu nombre</label>
+            <input type="text" id="clienteNombre" name="nombre" placeholder="Tu nombre y apellidos" required />
+          </div>
+
+          <div class="form-group">
+            <label for="clienteContacto">Teléfono o correo</label>
+            <input type="text" id="clienteContacto" name="contacto" placeholder="Tu teléfono o correo" required />
+          </div>
+        </div>
+
+        <div class="booking-actions">
+          <button type="submit" class="btn-gold">Confirmar solicitud de cita</button>
+        </div>
+      </form>
+
+      <div id="bookingSummary" class="booking-summary" hidden></div>
+    </section>
+
+    <section id="ubicacion" class="salon-section location-box">
+      <div class="location-header">
+        <div>
+          <span class="mini-label">Dónde estamos</span>
+          <h2>Brows by Assma Cosmetics</h2>
+          <p class="address-line">C. de Concepción Jerónima, 5, 28012 Madrid, España</p>
+          <p class="small-note">Gestiona tu solicitud de cita directamente desde esta web.</p>
+        </div>
+        <a href="#reservar" class="btn-gold">Reservar ahora</a>
+      </div>
+
+      <div class="map-wrapper">
+        <div id="salonMap" class="salon-map" aria-label="Mapa de ubicación en Madrid"></div>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=C.+de+Concepci%C3%B3n+Jer%C3%B3nima,+5,+28012+Madrid"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-gmaps-btn"
+        >
+          📍 Abrir en Google Maps
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="salon-footer">
+    <p>Brows by Assma Cosmetics · C. de Concepción Jerónima, 5, 28012 Madrid, España</p>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+  <script src="script.js"></script>
+</body>
+</html>

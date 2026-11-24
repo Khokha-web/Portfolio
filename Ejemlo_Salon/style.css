@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #fbf8f3;
+  color: #231f1d;
+  line-height: 1.6;
+}
+
+.salon-header {
+  background-color: #1c1715;
+  color: #ffffff;
+}
+
+.salon-nav-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.salon-logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+}
+
+.salon-logo span {
+  color: #d4a373;
+}
+
+.salon-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.salon-nav a {
+  color: #f3ede4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.salon-nav .back-link {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+.salon-hero {
+  position: relative;
+  width: 100%;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 3rem 1.5rem;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(28, 23, 21, 0.65) 0%, rgba(28, 23, 21, 0.88) 100%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.salon-kicker {
+  color: #e6be8a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero-inner h1 {
+  font-size: 2.35rem;
+  line-height: 1.18;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.salon-lead {
+  color: #ede6dc;
+  max-width: 580px;
+  margin: 0 auto 1.75rem;
+  font-size: 1rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btn-gold {
+  display: inline-block;
+  background-color: #c6925a;
+  color: #1c1715;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-light-outline {
+  display: inline-block;
+  border: 1px solid #e6be8a;
+  color: #f8f2ea;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+}
+
+.salon-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.salon-section {
+  margin-bottom: 3.5rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.mini-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9c6b3b;
+  margin-bottom: 0.25rem;
+}
+
+.section-heading h2 {
+  font-size: 1.85rem;
+  color: #1c1715;
+}
+
+.section-heading p {
+  color: #5c534c;
+}
+
+.cat-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.cat-btn {
+  background-color: #ffffff;
+  border: 1px solid #dfd5c7;
+  color: #3b332e;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.cat-btn.active {
+  background-color: #1c1715;
+  color: #f6e7d4;
+  border-color: #1c1715;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #ebe2d5;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(28, 23, 21, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card.hide-service {
+  display: none;
+}
+
+.service-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.service-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-cat {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #9c6b3b;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.service-price {
+  font-weight: 800;
+  color: #1c1715;
+  font-size: 0.92rem;
+}
+
+.service-body h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.45rem;
+  color: #1c1715;
+}
+
+.service-body p {
+  font-size: 0.92rem;
+  color: #5c534c;
+  flex: 1;
+}
+
+.book-service-btn {
+  margin-top: 0.95rem;
+  width: fit-content;
+  background-color: #fbf8f3;
+  color: #1c1715;
+  border: 1px solid #c6925a;
+  padding: 0.45rem 0.95rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.book-service-btn:hover {
+  background-color: #c6925a;
+}
+
+.booking-section {
+  background-color: #ffffff;
+  border: 1px solid #e6dccd;
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #231f1d;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #d8cbb8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #fbf8f3;
+  color: #231f1d;
+}
+
+.booking-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.booking-summary {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 10px;
+  background-color: #f6efe4;
+  border-left: 4px solid #c6925a;
+  color: #231f1d;
+}
+
+.location-box {
+  background-color: #ffffff;
+  border: 1px solid #e6dccd;
+  border-radius: 14px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e6dccd;
+}
+
+.salon-map {
+  width: 100%;
+  height: 320px;
+  z-index: 1;
+}
+
+.map-gmaps-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 500;
+  background-color: #1c1715;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.55rem 0.95rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.map-gmaps-btn:hover {
+  background-color: #332a26;
+}
+
+.address-line {
+  font-weight: 600;
+  color: #1c1715;
+  margin-top: 0.25rem;
+}
+
+.small-note {
+  color: #6b6058;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.salon-footer {
+  text-align: center;
+  padding: 1.75rem 1rem;
+  color: #6b6058;
+  font-size: 0.88rem;
+  border-top: 1px solid #e6dccd;
+}
+@media (max-width: 600px) {
+  .salon-nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .salon-hero {
+    min-height: 75vh;
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero-inner h1 {
+    font-size: 1.85rem;
+  }
+
+  .salon-main {
+    padding: 2.5rem 1.1rem;
+  }
+
+  .booking-section,
+  .location-box {
+    padding: 1.35rem;
+  }
+
+  .salon-map {
+    height: 250px;
+    touch-action: pan-y;
+  }
+
+  .map-gmaps-btn {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.8rem;
+  }
+}
