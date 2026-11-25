@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page_title">Ejemplo Web — Diseño Claro y Moderno</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">Estudio<span>Verde</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#propuesta" data-i18n="nav_proposal">Propuesta</a></li>
+        <li><a href="#preguntas" data-i18n="nav_faq">Preguntas</a></li>
+        <li><a href="#contacto" class="nav-cta" data-i18n="nav_contact">Pedir info</a></li>
+      </ul>
+
+      <div class="lang-switcher" aria-label="Selector de idioma">
+        <button type="button" class="lang-btn active" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+      </div>
+
+      <a href="../portfolio.html#proyectos" class="portfolio-back" data-i18n="portfolio_back">← Volver al portfolio</a>
+    </div>
+  </nav>
+
+  <header class="split-hero">
+    <div class="hero-text">
+      <span class="pill" data-i18n="pill">Ejemplo de web promocional</span>
+      <h1 data-i18n="hero_title">Haz que tu proyecto destaque desde el primer segundo</h1>
+      <p data-i18n="hero_desc">
+        Un diseño luminoso, ordenado y pensado para presentar un servicio, producto o idea con claridad en cualquier dispositivo.
+      </p>
+      <div class="hero-buttons">
+        <a href="#propuesta" class="btn-emerald" data-i18n="btn_explore">Explorar secciones</a>
+        <a href="#preguntas" class="btn-outline" data-i18n="btn_how">Ver cómo funciona</a>
+      </div>
+    </div>
+
+    <div class="hero-box">
+      <div class="box-header">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="box-content">
+        <h3 data-i18n="box_title">Lo que incluye esta estructura</h3>
+        <ul>
+          <li data-i18n="box_1">✓ Menú superior limpio y directo</li>
+          <li data-i18n="box_2">✓ Diseño adaptado a móvil y tablet</li>
+          <li data-i18n="box_3">✓ Secciones claras sin distracciones</li>
+          <li data-i18n="box_4">✓ Preguntas frecuentes interactivas</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="propuesta" class="container section-space">
+      <div class="section-head">
+        <h2 data-i18n="sec_proposal_title">Adaptable a cualquier necesidad</h2>
+        <p data-i18n="sec_proposal_desc">Cada bloque se organiza según lo que quieras comunicar a tus visitantes.</p>
+      </div>
+
+      <div class="features-row">
+        <div class="feature-item">
+          <div class="num">01</div>
+          <h3 data-i18n="f1_title">Mensaje directo</h3>
+          <p data-i18n="f1_desc">Un titular claro y una breve explicación para captar la atención nada más entrar.</p>
+        </div>
+        <div class="feature-item">
+          <div class="num">02</div>
+          <h3 data-i18n="f2_title">Información ordenada</h3>
+          <p data-i18n="f2_desc">Bloques visuales fáciles de leer para explicar ventajas, horarios o características.</p>
+        </div>
+        <div class="feature-item">
+          <div class="num">03</div>
+          <h3 data-i18n="f3_title">Llamada a la acción</h3>
+          <p data-i18n="f3_desc">Botones visibles para que el cliente te escriba o solicite más detalles rápidamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preguntas" class="faq-bg section-space">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="faq_heading">Preguntas frecuentes (con JavaScript)</h2>
+          <p data-i18n="faq_sub">Haz clic en cada pregunta para abrir o cerrar la respuesta:</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span class="faq-label" data-i18n="q1">¿Se puede cambiar los colores y textos de este diseño?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="a1">Sí, todos los colores, tipografías, imágenes y textos se personalizan por completo según tu idea o marca.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span class="faq-label" data-i18n="q2">¿Funciona bien en teléfonos móviles?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="a2">Sí, toda la estructura es responsive y se reorganiza automáticamente en pantallas pequeñas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span class="faq-label" data-i18n="q3">¿Se pueden añadir más páginas o secciones?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="a3">Por supuesto. Se puede empezar con una página única y ampliarla con galería, catálogo o formulario cuando lo necesites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="container section-space cta-banner">
+      <h2 data-i18n="cta_title">¿Te gusta este estilo para tu página?</h2>
+      <p data-i18n="cta_desc">Vuelve al portfolio y cuéntame qué tienes en mente.</p>
+      <a href="../portfolio.html#contacto" class="btn-emerald" data-i18n="cta_btn">Contactar con Khaoula</a>
+    </section>
+  </main>
+
+  <footer class="light-footer">
+    <p data-i18n="footer_text">Demo de diseño alternativo · Creada por Khaoula con HTML, CSS y JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
